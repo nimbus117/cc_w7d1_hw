@@ -9,7 +9,7 @@ PrimeChecker.prototype.bindEvents = function () {
     const inputtedNumber = event.detail;
     const result = this.checkPrime(inputtedNumber);
     console.log('prime_checker', result);
-    PubSub.publish('PrimeChecker:result-calculated');
+    PubSub.publish('PrimeChecker:result-calculated', result);
   })
 }
 
